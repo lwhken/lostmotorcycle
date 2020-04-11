@@ -1,0 +1,14 @@
+spring.main.banner-mode=off
+logging.level.root=info
+
+# motorcycle DB
+scheduler.datasource.url=jdbc:postgresql://localhost:5432/motorcycle
+scheduler.datasource.username=motorcycle
+scheduler.datasource.password=motorcycle
+scheduler.datasource.driver-class=org.postgresql.Driver
+scheduler.datasource.type=com.zaxxer.hikari.HikariDataSource
+
+# JPA
+scheduler.jpa.hibernate.hbm2ddl.auto=update
+scheduler.jpa.hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+scheduler.jpa.hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
