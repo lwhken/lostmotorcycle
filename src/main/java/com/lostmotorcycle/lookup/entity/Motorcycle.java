@@ -1,18 +1,14 @@
 package com.lostmotorcycle.lookup.entity;
 
+import com.lostmotorcycle.lookup.AppEntity;
 import com.lostmotorcycle.lookup.data.Colour;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Data
-public class Motorcycle {
-	@Id	@GeneratedValue
-	private Long id;
+public class Motorcycle extends AppEntity {
 
 	private String rego;
 	private String vin;
@@ -21,4 +17,7 @@ public class Motorcycle {
 	private Make make;
 	private Integer year;
 	private Colour colour;
+
+	@OneToOne
+	private Contact contact;
 }
